@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sheet animSheet="resource\\CharacterSprite.png">
+       <Animation animName="Player Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="0" right="64" bottom="64"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="64" right="64" bottom="128"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="128" right="64" bottom="192"/>
+                  </Frame>
+       </Animation>
+</Sheet>
+
+

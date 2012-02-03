@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\CBase.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CBullet.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CEnemy.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CPlayer.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CHuman.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CEventSystem.cpp">
+      <Filter>Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CMessage.cpp">
+      <Filter>Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CMessageSystem.cpp">
+      <Filter>Messaging</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CGame.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CGamePlayState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CObjectManager.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CSGD_Direct3D.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CSGD_DirectInput.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CSGD_TextureManager.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CSGD_FModManager.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CXboxInput.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SGD_Math.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinystr.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxml.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxmlerror.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\tinyxmlparser.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CStopWatch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WinMain.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CKeyBinds.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CPrintFont.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\AnimationManager.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCamera.cpp">
+      <Filter>Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CMainMenuState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\COptionsState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CAudioState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SimpleWorldClamp.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CEndGameState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCapsule.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Voices.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CLoadState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\CCreditsState.cpp">
+      <Filter>States</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Guard.cpp">
+      <Filter>Game Objects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\CBase.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CBullet.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CEnemy.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CPlayer.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CHuman.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CEventSystem.h">
+      <Filter>Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CEvent.h">
+      <Filter>Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CMessage.h">
+      <Filter>Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CMessageSystem.h">
+      <Filter>Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CGame.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CGamePlayState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\IGameState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\IListener.h">
+      <Filter>Messaging</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\IBaseInterface.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CObjectFactory.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CObjectManager.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CSGD_Direct3D.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CSGD_DirectInput.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CSGD_TextureManager.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CSGD_FModManager.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CXboxInput.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SGD_Math.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SGD_Util.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tinystr.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\tinyxml.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CStopWatch.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CKeyBinds.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CPrintFont.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\AnimationManager.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCamera.h">
+      <Filter>Wrappers</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CMainMenuState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\COptionsState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CAudioState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SimpleWorldClamp.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CEndGameState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCapsule.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Voices.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CLoadState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\CCreditsState.h">
+      <Filter>States</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Guard.h">
+      <Filter>Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{1ff43f69-2e5f-4664-98cb-8a897a5ab87f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{adbbb507-1b88-457f-a36b-84fe5c06e987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wrappers">
+      <UniqueIdentifier>{652be178-1057-496c-bb37-ffd68a6c8004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game Objects">
+      <UniqueIdentifier>{380ad263-6aa2-454a-af94-427dd0fa5496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Messaging">
+      <UniqueIdentifier>{eb3c3328-c496-47b5-b51d-ed8a82e8cf3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="States">
+      <UniqueIdentifier>{a905e51b-de9d-401f-9fb8-c3035836907c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Zombie Mall.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="zombie_32.ico" />
+  </ItemGroup>
+</Project>
