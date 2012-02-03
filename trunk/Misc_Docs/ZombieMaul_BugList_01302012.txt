@@ -1,0 +1,93 @@
+Playtest error list
+=====================================================================================
+Some of these will not have ways to replicate the issue, such as the spawning off map.
+
+Playtest Hardware - 
+
+Macbook Pro w/ bootcamp.
+Running on Windows partition
+DirectX SDK 2010 installed
+
+
+
+--Spawning off map - 
+
+When starting the game, the Hero will spawn off map.  This event seemed random.  Quit game and restart to load correctly.
+
+
+
+--Footsteps after end game -
+
+Footsteps audio still audible after game end.
+
+To replicate:
+
+Begin game and play until timer runs out.
+Score screen will still have the sound of the player walking.
+
+
+
+--New game continues previous game:
+
+Starting a new game right after you have finished will cause the old game to continue while a new game starts.  Both will be "overlayed" in a sense on the playable area.  We witnessed two Hero's during this gameplay state which leads me to believe two games are currently going on.
+
+To Replicate:
+
+Play a round of ZombieMaul.
+After score screen, hit spacebar and begin a new game.
+New game will display previous game as well as new game.
+
+To get rid of this issue, the player must exit completely out of the game and restart.
+
+--(Jesse) Initially spawn main character in the miniature size, same size as mini-map characters.
+
+To replicate: simply load up the game. Only happens on the first game played though. Event seemed random for the most part.
+
+--(Jesse) Minimap characters do not remain contained by the minimap. After a while, I have noticed several of them drifting out into normal gameplay space.
+
+To replicate: Normal gameplay.
+
+
+
+
+This is the list I have so far.  If you are going to work on this issue, please update this readme with your name at the beginning of the issue so we know it is currently being worked on.
+
+
+ - Andy Madruga, This bug was fixed with my copy of the exe I will go ahead and insert a new .zip file that should have the fixes.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+New game continues previous game:
+
+Starting a new game right after you have finished will cause the old game to continue while a new game starts.  Both will be "overlayed" in a sense on the playable area.  We witnessed two Hero's during this gameplay state which leads me to believe two games are currently going on.
+
+To Replicate:
+
+Play a round of ZombieMaul.
+After score screen, hit spacebar and begin a new game.
+New game will display previous game as well as new game.
+
+To get rid of this issue, the player must exit completely out of the game and restart.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+- Andy Madruga, could not replicate on my copy.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Footsteps after end game -
+
+Footsteps audio still audible after game end.  To replicate:
+
+Begin game and play until timer runs out.
+Score screen will still have the sound of the player walking.
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+- Andy Madruga, Changed player initial spawn position.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Spawning off map - 
+
+When starting the game, the Hero will spawn off map.  This event seemed random.  Quit game and restart to load correctly.
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
