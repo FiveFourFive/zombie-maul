@@ -82,7 +82,7 @@ void CGamePlayState::Enter(void)
 	m_pMS->InitMessageSystem (MessageProc);
 
 	SetScore( 0 );
-	SetGameTime( 2.0f );
+	SetGameTime( 120.0f );
 	SetPauseTimer( 0.0f );
 
 	m_pMS->SendMsg (new CCreateLevelMessage());
