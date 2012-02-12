@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sheet animSheet="resource\\CharacterSprite.png">
+       <Animation animName="Guard Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="192" right="64" bottom="256"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="256" right="64" bottom="320"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="320" right="64" bottom="384"/>
+                  </Frame>
+       </Animation>
+</Sheet>
+

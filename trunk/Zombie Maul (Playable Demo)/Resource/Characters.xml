@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sheet animSheet="resource\\CharacterSprite.png">
+       <Animation animName="Zombie Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="0" right="340" bottom="270"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="280" right="340" bottom="555"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="566" right="340" bottom="834"/>
+                  </Frame>
+       </Animation>
+</Sheet>
