@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sheet animSheet="resource\\ReD_Mario.png">
+       <Animation animName="Little Mario Idle" isLooping="false">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="1" top="0" right="13" bottom="15"/>
+                  </Frame>
+       </Animation>
+       <Animation animName="Little Mario Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="17" top="1" right="30" bottom="15"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="34" top="0" right="45" bottom="15"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="48" top="0" right="63" bottom="15"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="34" top="0" right="45" bottom="15"/>
+                  </Frame>
+       </Animation>
+       <Animation animName="Big Mario Idle" isLooping="false">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="16" right="15" bottom="47"/>
+                  </Frame>
+       </Animation>
+       <Animation animName="Big Mario Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="16" top="18" right="31" bottom="47"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="33" top="17" right="46" bottom="47"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="48" top="16" right="63" bottom="47"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="33" top="17" right="46" bottom="47"/>
+                  </Frame>
+       </Animation>
+</Sheet>
+
+
+
+
+

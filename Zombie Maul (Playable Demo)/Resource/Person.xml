@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sheet animSheet="resource\\CharacterSprite.png">
+       <Animation animName="Person Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="384" right="64" bottom="448"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="448" right="64" bottom="512"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="512" right="64" bottom="576"/>
+                  </Frame>
+       </Animation>
+       <Animation animName="Zombie Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="576" right="64" bottom="640"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="640" right="64" bottom="704"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="704" right="64" bottom="768"/>
+                  </Frame>
+       </Animation>
+</Sheet>
+
+

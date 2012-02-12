@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Sheet animSheet="resource\\CharacterSprite.png">
+       <Animation animName="Person Walking" isLooping="true">
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="1675" right="340" bottom="1850"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="1885" right="340" bottom="2060"/>
+                  </Frame>
+                  <Frame frameTime="0.125">
+                         <ImageRect left="0" top="2085" right="340" bottom="2277"/>
+                  </Frame>
+       </Animation>
+</Sheet>
