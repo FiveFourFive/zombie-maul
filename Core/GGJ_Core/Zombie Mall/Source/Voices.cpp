@@ -22,8 +22,8 @@ CVoices::~CVoices(void)
 int CVoices::AddVoice(const char* filepath)
 {
 	int index = CSGD_FModManager::GetInstance()->LoadSound(filepath);
-	CSGD_FModManager::GetInstance()->SetVolume(index, (float)(CGame::GetInstance()->getSoundBVolume() / 100));
-	CSGD_FModManager::GetInstance()->SetPan(index, (float)(CGame::GetInstance()->getPanning()/100));
+	CSGD_FModManager::GetInstance()->SetVolume(index, (float)(CGame::GetInstance()->getSoundBVolume() / 100.0f));
+	CSGD_FModManager::GetInstance()->SetPan(index, (float)(CGame::GetInstance()->getPanning()/100.0f));
 	
 	// Error check
 	if (index == -1)

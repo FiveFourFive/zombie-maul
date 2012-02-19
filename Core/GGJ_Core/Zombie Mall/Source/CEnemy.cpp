@@ -136,7 +136,7 @@ void CEnemy::ComputeMovement(float fElapsedTime)
 	
 	if(m_fMoveTime <= 0.0f)
 	{
-		m_fMoveTime = ((rand() % 200) / 100) + 0.5f;
+		m_fMoveTime = ((rand() % 200) / 100.0f) + 0.5f;
 		m_fRandRot = (float)((rand() % 1256) - 628) / 100.0f;
 	}
 	if(m_fRandRot >= 0.01f)

@@ -79,8 +79,8 @@ CPlayer::CPlayer()
 
 	// Walking
 	m_nWalkSound = m_pFM->LoadSound("Resource/Sounds/ZM Audio/WalkLoop.wav", FMOD_LOOP_NORMAL);
-	m_pFM->SetVolume(m_nWalkSound, (float)(CGame::GetInstance()->getSoundBVolume() / 100));
-	m_pFM->SetPan(m_nWalkSound, (float)(CGame::GetInstance()->getPanning() / 100));
+	m_pFM->SetVolume(m_nWalkSound, (float)(CGame::GetInstance()->getSoundBVolume() / 100.0f));
+	m_pFM->SetPan(m_nWalkSound, (float)(CGame::GetInstance()->getPanning() / 100.0f));
 	m_pFM->PlaySoundA(m_nWalkSound);
 }
 

@@ -16,74 +16,75 @@ CGuard::CGuard(void)
 	m_nCollisionWithStaticObjectsSphere.m_fRadius = 32.0f;
 	m_nType = type::OBJECT_GUARD;
 
-	int raNum = std::rand() % 3;
+	//int raNum = std::rand() % 3;
 
-	m_pVoice = new CVoices();
+	//m_pVoice = new CVoices();
 
-	if (raNum == 0)
-	{
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_01.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_02.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_03.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_04.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_05.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_06.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_07.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_08.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_09.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_10.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_11.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_12.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_13.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_14.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_15.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_16.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_17.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_18.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_19.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_20.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_21.wav");
-	}
-	else if (raNum == 1)
-	{
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_01.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_02.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_03.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_04.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_05.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_06.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_07.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_08.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_09.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_10.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_11.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_12.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_13.wav");
-	}
-	else
-	{
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_01.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_02.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_03.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_04.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_05.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_06.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_07.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_08.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_09.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_10.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_11.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_12.wav");
-		m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_13.wav");
-	}
+	//if (raNum == 0)
+	//{
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_01.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_02.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_03.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_04.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_05.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_06.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_07.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_08.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_09.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_10.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_11.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_12.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_13.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_14.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_15.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_16.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_17.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_18.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_19.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_20.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_21.wav");
+	//}
+	//else if (raNum == 1)
+	//{
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_01.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_02.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_03.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_04.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_05.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_06.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_07.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_08.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_09.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_10.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_11.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_12.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_13.wav");
+	//}
+	//else
+	//{
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_01.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_02.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_03.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_04.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_05.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_06.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_07.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_08.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_09.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_10.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_11.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_12.wav");
+	//	m_pVoice->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_13.wav");
+	//}
 
-	m_pVoice->PlayRandomClip();
+	//m_pVoice->PlayRandomClip();
 }
 
 
 CGuard::~CGuard(void)
 {
-	delete m_pVoice;
+	//delete m_pVoice;
+	m_pVoice = NULL;
 }
 
 void CGuard::Update(float fElapsedTime)
@@ -214,4 +215,12 @@ type CGuard::CheckCollision(IBaseInterface* pBase)
 void CGuard::HandleEvent(CEvent* pEvent)
 {
 
+}
+
+void CGuard::TakeBackYourLegs(CVoices* pVoice)
+{
+	m_pVoice = pVoice;
+
+	// Called on initialization, so go ahead and say something
+	m_pVoice->PlayRandomClip();
 }
