@@ -49,6 +49,9 @@ public:
 
 	bool CheckForPlayer(void);
 	void HuntPlayer(void);
+
+	// Lol, little mermaid referrence
+	void TakeBackYourLegs(CVoices* voice);
 };
 
 #endif // _CGUARD_H

@@ -67,11 +67,15 @@ void CMainMenuState::Enter(void)
 
 
 	m_nBackgroundMusicID = m_pFM->LoadSound("resource/sounds/ElevatorTheme.wav", FMOD_LOOP_NORMAL);
+	m_pFM->SetVolume(m_nBackgroundMusicID, (float)(CGame::GetInstance()->getSoundAVolume() / 100.0f));
 
 	m_pFM->PlaySoundA(m_nBackgroundMusicID);
 
 	m_nMenuMove = m_pFM->LoadSound( "resource/sounds/Menu_Move.wav");
+	m_pFM->SetVolume(m_nMenuMove, (float)(CGame::GetInstance()->getSoundBVolume() / 100.0f));
+
 	m_nMenuSelect = m_pFM->LoadSound( "resource/sounds/Menu_Accept.wav");
+	m_pFM->SetVolume(m_nMenuSelect, (float)(CGame::GetInstance()->getSoundBVolume() / 100.0f));
 }
 
 void CMainMenuState::Exit(void)

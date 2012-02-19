@@ -9,6 +9,7 @@
 #include "CMessageSystem.h"
 #include "CEventSystem.h"
 #include "CCapsule.h"
+#include "Voices.h"
 
 #include <string>
 using std::string;
@@ -66,6 +67,12 @@ private:
 	CSpeedRamp* speedy;
 	CBullet* bullet;
 	CHuman* hummy;
+
+	// Guard Voices
+	CVoices* guardVoice1;
+	CVoices* guardVoice2;
+	CVoices* guardVoice3;
+
 	// sound
 	int m_nBackgroundMusicID;
 	int m_nIntroID;
@@ -120,6 +127,8 @@ public:
 
 	static void MessageProc(CBaseMessage* pMsg);
 	void RenderMinimap();
+
+	void InitializeGuardVoices(void);
 
 	int GetScore() const					{ return score; }
 	void SetScore( int nScore )				{ score = nScore; }

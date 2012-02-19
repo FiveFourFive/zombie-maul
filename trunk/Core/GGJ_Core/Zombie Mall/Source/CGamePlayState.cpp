@@ -83,7 +83,7 @@ void CGamePlayState::Enter(void)
 
 	SetScore( 0 );
 	SetGameTime( 120.0f );
-	SetPauseTimer( 0.0f );
+	SetPauseTimer( 0.0f ); 
 
 	m_pMS->SendMsg (new CCreateLevelMessage());
 	m_pMS->ProcessMessages ();
@@ -92,11 +92,14 @@ void CGamePlayState::Enter(void)
 	//m_pController2 = CGame::GetInstance()->GetController2();
 	m_pPF = new CPrintFont(m_pTM->LoadTexture("resource/Font.png",D3DCOLOR_XRGB(0, 0, 0)));
 
+	// Initlize Images
 	m_nBGImageID = m_pTM->LoadTexture( "resource\\DefaultPlayMap.png" );
 	m_nMinimapID = m_pTM->LoadTexture("resource\\GUIMiniMap.png");
+
+	// Initialize BGM
 	m_nIntroID = m_pFM->LoadSound("resource/sounds/zm_bg2.mp3");
-	m_pFM->SetVolume(m_nIntroID, (float)(CGame::GetInstance()->getSoundAVolume() / 100));
-	m_pFM->SetPan(m_nIntroID, (float)(CGame::GetInstance()->getPanning() / 100));
+	m_pFM->SetVolume(m_nIntroID, (float)(CGame::GetInstance()->getSoundAVolume() / 100.0f));
+	m_pFM->SetPan(m_nIntroID, (float)(CGame::GetInstance()->getPanning() / 100.0f));
 	//m_pFM->SetVolume(m_nIntroID,100);
 	m_pFM->PlaySoundA(m_nIntroID);
 	CGame::GetInstance()->ResetInputDelay();
@@ -171,7 +174,7 @@ void CGamePlayState::Enter(void)
 	m_StoreWalls.push_back(MapWall6);
 	m_StoreWalls.push_back(MapWall7);
 
-
+	InitializeGuardVoices();
 }
 
 void CGamePlayState::Exit(void)
@@ -203,6 +206,10 @@ void CGamePlayState::Exit(void)
 		m_pOM = NULL;
 		m_pOM->DeleteInstance();
 	}
+
+	delete guardVoice1;
+	delete guardVoice2;
+	delete guardVoice3;
 }
 
 bool CGamePlayState::Input()
@@ -417,6 +424,16 @@ void CGamePlayState::SpawnGuard(void)
 	newguard->SetDirY( -1.0f );
 	newguard->SetRotation(0.0f);
 
+	int raNum = std::rand() % 3;
+
+	if ( raNum == 0 )
+		newguard->TakeBackYourLegs(guardVoice1);
+	else if ( raNum == 1 )
+		newguard->TakeBackYourLegs(guardVoice2);
+	else
+		newguard->TakeBackYourLegs(guardVoice3);
+
+
 	if(m_bSpawnSideX)
 		newguard->SetPosX(1300);
 	else
@@ -549,4 +566,64 @@ void CGamePlayState::MessageProc(CBaseMessage* pMsg)
 	//		break;
 	//	}
 	}
+}
+
+void CGamePlayState::InitializeGuardVoices()
+{
+	guardVoice1 = new CVoices();
+	guardVoice2 = new CVoices();
+	guardVoice3 = new CVoices();
+
+	// Guard Voice 1
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_01.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_02.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_03.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_04.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_05.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_06.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_07.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_08.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_09.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_10.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_11.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_12.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_13.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_14.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_15.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_16.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_17.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_18.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_19.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_20.wav");
+	guardVoice1->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G1_21.wav");
+
+	// Guard Voice 2
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_01.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_02.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_03.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_04.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_05.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_06.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_07.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_08.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_09.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_10.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_11.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_12.wav");
+	guardVoice2->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G2_13.wav");
+
+	// Guard Voice 3
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_01.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_02.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_03.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_04.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_05.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_06.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_07.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_08.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_09.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_10.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_11.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_12.wav");
+	guardVoice3->AddVoice("Resource/Sounds/ZM Audio/Vocalizations/G3_13.wav");
 }

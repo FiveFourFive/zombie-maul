@@ -74,11 +74,20 @@ void CGame::Initialize(HWND hWnd, HINSTANCE hInstance, int nScreenWidth, int nSc
 //	m_bController = m_pController1->Connected();
 	m_fInputDelay = 1.0f;
 	m_fThumbDelay = 1.0f;
+
 	// Initialize Singletons
 	m_pD3D->InitDirect3D(hWnd, nScreenWidth, nScreenHeight, bIsWindowed, false);
 	m_pTM->InitTextureManager( m_pD3D->GetDirect3DDevice(), m_pD3D->GetSprite());
 	m_pFM->InitFModManager(hWnd);
 	m_pDI->InitDirectInput(hWnd, hInstance, DI_KEYBOARD /*| DI_MOUSE*/, 0);
+
+
+	// Seed the random before user made states are initialized
+	srand((unsigned int)time(0));
+
+	// Load the resources in first before the Main Menu calls on the sounds
+	Load("resource/AudioSettings.xml");
+
 	// Initialize States
 	m_pMainMenuState = CMainMenuState::GetInstance();
 	this->AddState(m_pMainMenuState);
@@ -89,14 +98,17 @@ void CGame::Initialize(HWND hWnd, HINSTANCE hInstance, int nScreenWidth, int nSc
 	/*m_nSoundAVolume = 0.10f;
 	m_nSoundBVolume = 0.8f;
 	m_panning = 0.0f;*/
-	srand((unsigned int)time(0));
 	m_stopWatch.Start();
 
-	Load("resource/AudioSettings.xml");
-
+	// Initialize Sounds
 	m_nMenuMove = m_pFM->LoadSound( "resource/sounds/Menu_Move.wav");
+	m_pFM->SetVolume(m_nMenuMove, (float)(CGame::GetInstance()->getSoundBVolume() / 100.0f));
+
 	m_nMenuSelection = m_pFM->LoadSound( "resource/sounds/Menu_Accept.wav");
+	m_pFM->SetVolume(m_nMenuSelection, (float)(CGame::GetInstance()->getSoundBVolume() / 100.0f));
+
 	m_nMenuCancel = m_pFM->LoadSound("resource/sounds/Menu_Cancel.wav");
+	m_pFM->SetVolume(m_nMenuCancel, (float)(CGame::GetInstance()->getSoundBVolume() / 100.0f));
 }
 
 bool CGame::Main()

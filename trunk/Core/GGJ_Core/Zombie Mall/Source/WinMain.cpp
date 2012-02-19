@@ -14,7 +14,12 @@
 //////////////////////////////////////////////////////////////////////////////////////////////
 #include <windows.h>	//	Needed for Windows Applications.
 #include "..\resource.h"
+
+// Run VLD for debug builds
+#if _DEBUG
 #include <vld.h>
+#endif
+
 #include <ctime>
 //#define _CRTDBG_MAP_ALLOC
 //#include <crtdbg.h>
