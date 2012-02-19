@@ -111,8 +111,8 @@ void CGamePlayState::Enter(void)
 	AnimManager::GetInstance()->SetAnimation( pPlayer->GetAnimID(), "Player Walking" );
 	AnimManager::GetInstance()->PlayAnimation( pPlayer->GetAnimID() );
 
-	pPlayer->SetPosX( 300.0f );
-	pPlayer->SetPosY( 300.0f );
+	pPlayer->SetPosX( 800.0f );
+	pPlayer->SetPosY( 700.0f );
 
 	pPlayer->SetWidth( 64 );
 	pPlayer->SetHeight( 64 );
