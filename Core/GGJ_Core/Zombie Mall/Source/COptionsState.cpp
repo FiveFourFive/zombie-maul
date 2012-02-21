@@ -49,7 +49,7 @@ void COptionsState::Enter()
 
 	m_nFontID = m_pTM->LoadTexture("resource/Font.png",D3DCOLOR_XRGB(0, 0, 0));
 	m_pPF = new CPrintFont(m_nFontID);
-
+	m_nBGImageID = m_pTM->LoadTexture("resource/ZMOptionsScreen.png",D3DCOLOR_XRGB(0, 0, 0));
 	m_nMenuMove = CGame::GetInstance()->GetMenuMoveID();
 	m_nMenuSelection = CGame::GetInstance()->GetMenuSelectID();
 	m_nMenuCancel = CGame::GetInstance()->GetMenuCancelID();
@@ -58,7 +58,7 @@ void COptionsState::Enter()
 void COptionsState::Exit()
 {
 	//m_pFM->UnloadSound(m_nBackgroundMusicID);
-
+	m_pTM->UnloadTexture(m_nBGImageID);
 	m_pTM->UnloadTexture(m_nFontID);
 	delete m_pPF;
 }
@@ -97,26 +97,25 @@ void COptionsState::Update(float fElapsedTime)
 
 void COptionsState::Render(void)
 {
-	CSGD_Direct3D::GetInstance()->GetSprite()->Flush();
-	RECT r = { 0, 0, 800, 600 };
-	CSGD_Direct3D::GetInstance()->DrawRect(r, 0,0,0);
+	//CSGD_Direct3D::GetInstance()->GetSprite()->Flush();
+	//RECT r = { 0, 0, 800, 600 };
+	//CSGD_Direct3D::GetInstance()->DrawRect(r, 0,0,0);
+	m_pTM->Draw(m_nBGImageID,0,0,0.8f,0.75f);
 
-	m_pPF->PrintCentered("Zombie Mall",400,50,1.0f,D3DCOLOR_XRGB(200, 0, 0));
-	m_pPF->PrintCentered("v1.5",400,100,1.0f,D3DCOLOR_XRGB(200, 0, 0));
 
-	m_pPF->Print("AUDIO",300,200,0.5f,D3DCOLOR_XRGB(200, 0, 0));
+	m_pPF->Print("AUDIO",300,350,0.5f,D3DCOLOR_XRGB(200, 0, 0));
 //	m_pPF->Print("CONTROLS",300,250,0.5f,D3DCOLOR_XRGB(200, 0, 0));
-	m_pPF->Print("EXIT",300,250,0.5f,D3DCOLOR_XRGB(200, 0, 0));
+	m_pPF->Print("EXIT",300,400,0.5f,D3DCOLOR_XRGB(200, 0, 0));
 	switch(m_nSelection)
 		{
 		case AUDIO:			
-			m_pPF->Print("AUDIO",300,200,0.5f,D3DCOLOR_XRGB(0, 255, 0));
+			m_pPF->Print("AUDIO",300,350,0.5f,D3DCOLOR_XRGB(0, 255, 0));
 			break;
 //		case CONTROLS:
 	//		m_pPF->Print("CONTROLS",300,250,0.5f,D3DCOLOR_XRGB(0, 255, 0));	
 	//		break;
 		case EXIT:
-			m_pPF->Print("EXIT",300,250,0.5f,D3DCOLOR_XRGB(0, 255, 0));
+			m_pPF->Print("EXIT",300,400,0.5f,D3DCOLOR_XRGB(0, 255, 0));
 			break;
 		}
 }
