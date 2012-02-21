@@ -14,6 +14,8 @@ private:
 	CPrintFont* m_pPF;
 
 	int m_nBGImageID;
+	int m_nOuroboroID;
+	float m_fRotation;
 
 	CLoadState();
 	~CLoadState();

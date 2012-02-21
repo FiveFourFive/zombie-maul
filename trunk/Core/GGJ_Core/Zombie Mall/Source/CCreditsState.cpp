@@ -11,7 +11,8 @@
 CCreditsState::CCreditsState()
 {
 	m_pPF = 0;
-
+	m_nStartingY = -300;
+	m_nEndingY = 200;
 	m_vNames.push_back( "Credits" );
 	m_vNames.push_back( "" );
 	m_vNames.push_back( "Programmers" );
@@ -36,11 +37,12 @@ CCreditsState::CCreditsState()
 	m_vNames.push_back( "" );
 	m_vNames.push_back( "Zach Gurley" );
 	m_vNames.push_back( "Jeff Chilson" );
+	m_pYPos = new float[m_vNames.size()];
 }
 
 CCreditsState::~CCreditsState()
 {
-
+	delete[] m_pYPos;
 }
 
 CCreditsState* CCreditsState::GetInstance()
@@ -53,12 +55,17 @@ void CCreditsState::Enter()
 {
 	m_pPF = new CPrintFont(CSGD_TextureManager::GetInstance()->LoadTexture("resource/Font.png",D3DCOLOR_XRGB(0, 0, 0)));
 
-	m_nBGImageID = CSGD_TextureManager::GetInstance()->LoadTexture( "resource\\EndScreen.jpg" );
+	m_nBGImageID = CSGD_TextureManager::GetInstance()->LoadTexture( "resource\\ZMCreditsScreen.png" );
+
+	for(int i = 0; i < m_vNames.size(); i++)
+	{
+		m_pYPos[i] = 600.0f + 50.0f*(float)i;
+	}
 }
 
 bool CCreditsState::Input()
 {
-	if( CSGD_DirectInput::GetInstance()->KeyPressed( DIK_SPACE ) )
+	if( CSGD_DirectInput::GetInstance()->CheckKeys() != NULL )
 	{
 		CGame::GetInstance()->ChangeState( CMainMenuState::GetInstance() );
 	}
@@ -68,19 +75,24 @@ bool CCreditsState::Input()
 
 void CCreditsState::Update( float fElapsedTime )
 {
-
+	for(int i = 0; i < m_vNames.size(); i++)
+	{
+		m_pYPos[i] -= 40.0f * fElapsedTime;
+	}
 }
 
 void CCreditsState::Render()
 {
-	CSGD_TextureManager::GetInstance()->Draw( m_nBGImageID, 0, 0 );
+	CSGD_TextureManager::GetInstance()->Draw( m_nBGImageID, 0, 0 ,0.8f,0.75f);
 
 	for( std::vector<std::string>::size_type i = 0; i < m_vNames.size(); ++i )
 	{
-		m_pPF->Print( m_vNames[i].c_str(), 200, 30 + 20 * i, 0.8f, D3DCOLOR_XRGB(255, 255, 255) );
+		
+		if(m_pYPos[i] >= m_nEndingY)
+			m_pPF->Print( m_vNames[i].c_str(), 200, (int)m_pYPos[i], 0.8f, D3DCOLOR_XRGB(0, 0, 0) );
 	}
 
-	m_pPF->PrintCentered( "Press Space to Continue", CGame::GetInstance()->GetScreenWidth() / 2, CGame::GetInstance()->GetScreenHeight() - 50, 1.0f, D3DCOLOR_XRGB(255, 255, 255) );
+	m_pPF->PrintCentered( "Press Any Key to Continue", CGame::GetInstance()->GetScreenWidth() / 2, CGame::GetInstance()->GetScreenHeight() - 50, 1.0f, D3DCOLOR_XRGB(255, 255, 255) );
 }
 
 void CCreditsState::Exit()

@@ -25,6 +25,10 @@ private:
 	CCreditsState( const CCreditsState& );
 	CCreditsState& operator=( const CCreditsState& );
 
+	int m_nStartingY;
+	int m_nEndingY;
+	float* m_pYPos;
+
 public:
 	static CCreditsState* GetInstance();
 

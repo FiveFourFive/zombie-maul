@@ -19,6 +19,7 @@ private:
 
 	int	m_nFontID;
 	int m_nBackgroundMusicID;
+	int m_nBGImageID;
 	int m_nSelection;
 	int m_nMenuMove;
 	int m_nMenuSelection;
