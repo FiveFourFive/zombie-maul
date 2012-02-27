@@ -22,7 +22,6 @@ CEnemy::CEnemy(void)
 	SetPosY(30);
 	m_fMoveTime = 0;
 	m_fStopDelay = 0;
-	SetImageID(CSGD_TextureManager::GetInstance()->LoadTexture("resource/character.bmp",D3DCOLOR_XRGB(255,255,255)));
 	tVector2D look = tVector2D(0.0f, -1.0f);
 	SetLook(look);
 	m_fRandRot = 0.0f;
