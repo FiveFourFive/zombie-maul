@@ -1,0 +1,1 @@
+Run around as a zombie and infect.
